@@ -1,1 +1,11 @@
 Sample notebooks and data organised into datadots. Eventually this should all live in dothub.
+
+In the current example, we use house price data from two estate agents, agent1 and agent2. 
+Each of their datasets start in a different datadot and provenance of the data can be traced back to the agent it came from.
+
+TODO:
+Add demo of data version control:
+* make one agent's houseprice data in $1000s and one in $. Then, in the notebook format all data so houseprices are measured in same units and re-commit the dot.
+* add some `NaN` values to some data. Then, in notebook search and remove such malformatted data and re-commit the dot.
+
+Make more sophisticated model using gradient descent to show more realistic parameter settings.
