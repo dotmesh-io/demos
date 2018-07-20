@@ -1,11 +1,19 @@
-Sample notebooks and data organised into datadots. Eventually this should all live in dothub.
+Sample notebooks and data for Dotscience demos.
 
-In the current example, we use house price data from two estate agents, agent1 and agent2. 
-Each of their datasets start in a different datadot and provenance of the data can be traced back to the agent it came from.
+## To run:
 
-TODO:
-Add demo of data version control:
-* make one agent's houseprice data in $1000s and one in $. Then, in the notebook format all data so houseprices are measured in same units and re-commit the dot.
-* add some `NaN` values to some data. Then, in notebook search and remove such malformatted data and re-commit the dot.
+1. Clone the repo
 
-Make more sophisticated model using gradient descent to show more realistic parameter settings.
+2. Clone [Dotscience](https://github.com/dotmesh-io/dotscience) repo and install according to its instructions. Start using `yarn`.
+
+3. Clone the [experiment tracker](https://github.com/dotmesh-io/dotscience-ui-spike) repo. Inside that repo, run:
+`docker-compose build`
+`docker-compose up`
+(note that you don't need to follow all the instructions on this repo's README.
+You should see the experiment tracker running on localhost.
+
+4. Each ipython notebook here is a self-contained demo, to be used in conjunction with the experiment tracker. 
+Note that each requires the following 'input dots' to be set on the Dotscience local app:
+
+`house_prices_tf`: set an output folder called 'model. No need for an input folder as the data is drawn from Google cloud storage.
+`house_prices_py`: create two input dots for agent1 and agent 2, containing the respective CSVs. 
