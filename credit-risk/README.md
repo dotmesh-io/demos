@@ -5,15 +5,21 @@
 
 (keep private-ish -- API key contained below :/)
 
-Open a terminal.
+Open a terminal in Dotscience's Jupyterlab interface. We'll get the data from Kaggle's API as its too big to get into Dotscience via the GUI uploader.
+
 ```
-pip install kaggle &\
-   mkdir ~/.kaggle &\
-   echo "{"username":"hodesdon","key":"bc83ba268ce3695b369815a227d0991b"}" > ~/.kaggle/kaggle.json &\
-   kaggle datasets download -d julianocosta/home-credit &\
+pip install seaborn kaggle &&\
+   mkdir -p ~/.kaggle &&\
+   echo "{\"username\":\"hodesdon\",\"key\":\"dff06e16436b47c14634841335acb032\"}" > ~/.kaggle/kaggle.json &&\ 
+   kaggle datasets download -d julianocosta/home-credit &&\
    unzip home-credit 
 
 ```
+
+## To run notebook
+
+Run all cells as usual. 
+
 ## To speed up model
 1. Use a VM with 4 cores
 
