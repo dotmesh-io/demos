@@ -5,7 +5,11 @@
 
 1. Add the notebook and the file `application_test.csv`  via the GUI **Resources** uploader. We'll get the data from Kaggle's API as its too big to get into Dotscience via the GUI uploader right now.
 
-2. Start Jupyter, and open up a terminal. If you are working in a new project, or have powered your runner off in an existing project since you last used it, you should paste in the following:
+2. Start Jupyter, and open up a terminal.
+
+**File** > **New** > **Terminal**
+
+ If you are working in a new project, or have powered your runner off in an existing project since you last used it, you should paste in the following:
 
 (keep this relatively private as it contains an API key)
 
