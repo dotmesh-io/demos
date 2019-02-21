@@ -5,9 +5,9 @@
 
 1. Add the notebook and the file `application_test.csv`  via the GUI **Resources** uploader. We'll get the data from Kaggle's API as its too big to get into Dotscience via the GUI uploader right now.
 
-2. Start Jupyter, and open up a terminal.  Paste in the following:
+2. Start Jupyter, and open up a terminal. If you are working in a new project, or have powered your runner off in an existing project since you last used it, you should paste in the following:
 
-(keep private-ish -- API key contained below :/)
+(keep this relatively private as it contains an API key)
 
 ```
 pip install seaborn kaggle &&\
