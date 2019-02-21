@@ -36,3 +36,6 @@ pip install seaborn kaggle &&\
 | 10             	| 10.5s                                         	|
 | 100            	| 1.5m                                          	|
 | 1000           	| 15min                                         	|
+
+## Caveats
+At the moment, although we load in 6 data files, only one of them (`application_test.csv`) actually features in the dataframe. The rest just get declared as imputs but not read. We could do something with this extra data for a more complex demo in the future. Or, if the provenance graph looks too messy, just drop one of the inputs.
