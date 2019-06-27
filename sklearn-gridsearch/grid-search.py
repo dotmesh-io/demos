@@ -4,6 +4,8 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import classification_report
 from sklearn.svm import SVC
 
+import dotscience as ds; ds.script()
+
 print(__doc__)
 
 # Loading the Digits dataset
@@ -43,6 +45,11 @@ for score in scores:
     means = clf.cv_results_['mean_test_score']
     stds = clf.cv_results_['std_test_score']
     for mean, std, params in zip(means, stds, clf.cv_results_['params']):
+        ds.start()
+        ds.add_parameters(**params)
+        ds.add_summary("%s-stdev" % (score,), std)
+        ds.add_summary("%s-mean" % (score,), mean)
+        ds.publish()
         print("%0.3f (+/-%0.03f) for %r"
               % (mean, std * 2, params))
     print()
